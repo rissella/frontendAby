@@ -1,0 +1,20 @@
+.navbar {
+    background-color: #3040B3;
+    justify-content: start;
+}
+
+.navbar a {
+    color: white;
+}
+
+
+.right-list {
+    display: flex;
+    list-style: none;
+    margin: auto;
+    margin-right: 20px;
+}
+
+.nav-link{
+    cursor: pointer;
+}

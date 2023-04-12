@@ -1,0 +1,29 @@
+<div class="d-flex flex-column justify-content-center mt-2">
+  
+    <h1>Lista de estudiantes</h1>
+  
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fecha de Nacimiento</th>
+            <th scope="col">Fecha de Inscripción</th>
+            <th scope="col">Costo</th>
+            <th scope="col">Eliminar</th>
+            <th scope="col">Editar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of estudiante; let i=index">
+            <th scope="row">{{i}}</th>
+            <td>{{data.nombre}}</td>
+            <td>{{data.fechaNacimiento | date: 'dd/MM/yyyy'}}</td>
+            <td>{{data.fechaInscripcion | date: 'dd/MM/yyyy'}}</td>
+            <td>{{data.costo}}</td>
+            <td> <span class="span-button" (click)="eliminar(data.id)"><i class="bi bi-trash3"></i></span></td> 
+            <td> <a routerLink="editar/{{data.id}}" class="span-button" ><i class="bi bi-pen"></i></a></td> 
+          </tr>
+        </tbody>
+      </table>
+</div>

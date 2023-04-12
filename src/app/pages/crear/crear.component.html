@@ -1,0 +1,53 @@
+<div class="container d-flex justify-content-center align-items-center mt-2 ">
+
+    <div class="card">
+        <form class="" [formGroup]="estudianteForm">
+            <div class="form-floating mb-4">
+                <input type="text" id="n_u" class="form-control" formControlName="nombre"
+                    placeholder="Nombre" 
+                    />
+                <label class="form-label" for="n_u">Nombre</label>
+            </div>
+
+            <div class="form-floating mb-4">
+                <input type="date" id="n_u" class="form-control" formControlName="fechaNacimiento"
+                    placeholder="fechaNacimiento" />
+                <label class="form-label" for="n_u">Fecha Nacimiento</label>
+            </div>
+
+            <div class="form-floating mb-4">
+                <input type="date" id="pas" class="form-control" formControlName="fechaInscripcion"
+                    placeholder="fechaInscripcion" />
+                <label class="form-label" for="pas">Fecha Inscripcion</label>
+            </div>
+
+
+            <div class="form-floating mb-4">
+                <input type="number"  class="form-control" formControlName="edad"
+                    placeholder="edad" />
+                <label class="form-label" for="pas">Edad</label>
+            </div>
+            
+            <div class="form-floating mb-4">
+                <input type="number" id="pas" class="form-control" formControlName="costo"
+                    placeholder="costo" />
+                <label class="form-label" for="pas">Costo</label>
+            </div>
+
+            <div class="text-center pt-1 mb-5 pb-1">
+                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 me-2" type="button"
+                    [disabled]="!estudianteForm.valid" (click)="crear()">
+                    Crear Estudiante
+                </button>
+                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button"
+                routerLink="/home">
+                Cancelar
+                 </button>
+
+            </div>
+        </form>
+    </div>
+
+
+
+</div>
